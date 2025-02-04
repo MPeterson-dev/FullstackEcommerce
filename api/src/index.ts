@@ -1,8 +1,10 @@
-import express from "express";
+import express, { json } from "express";
 import productsRoutes from "./routes/products/index";
 
 const app = express();
 const port = 3000;
+//Middleware
+app.use(json());
 
 //Get = retrieve from API
 app.get("/", (req, res) => {
