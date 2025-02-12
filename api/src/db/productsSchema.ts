@@ -18,12 +18,12 @@ export const productsTable = pgTable("products", {
 //Middleware schema validation
 
 export const createProductSchema = createInsertSchema(productsTable).omit({
-  id: true,
+  //id: true,
 });
 
 export const updateProductSchema = createInsertSchema(productsTable)
   .omit({
-    id: true,
+    //id: true,
   })
   // .partial makes it so you don't have to update everything, can update one field
   .partial();
